@@ -1,3 +1,5 @@
+require 'converter'
+
 RSpec.describe Converter do
 
   it "converts 1 to I" do
@@ -5,47 +7,72 @@ RSpec.describe Converter do
     expect(result).to eq("I")
   end
 
-  xit "converts 2 to II" do
+  it "converts 2 to II" do
     result = Converter.do(2)
     expect(result).to eq("II")
   end
 
-  xit "converts 3 to III" do
+  it "converts 3 to III" do
     result = Converter.do(3)
     expect(result).to eq("III")
   end
 
-  xit "converts 4 to IV" do
+  it "converts 4 to IV" do
     result = Converter.do(4)
     expect(result).to eq("IV")
   end
 
-  xit "converts 5 to V" do
+  it "converts 5 to V" do
     result = Converter.do(5)
     expect(result).to eq("V")
   end
 
-  xit "converts 6 to VI" do
+  it "converts 6 to VI" do
     result = Converter.do(6)
     expect(result).to eq("VI")
   end
 
-  xit "converts 8 to VIII" do
+  it "converts 8 to VIII" do
     result = Converter.do(8)
     expect(result).to eq("VIII")
   end
 
-  xit "converts 9 to IX" do
+  it "converts 9 to IX" do
     result = Converter.do(9)
     expect(result).to eq("IX")
   end
 
-  xit "converts 777 to DCCLXXVII" do
+  it "converts 10 to X" do
+    result = Converter.do(10)
+    expect(result).to eq("X")
+  end
+
+  it "converts 20 to XX" do
+    result = Converter.do(20)
+    expect(result).to eq("XX")
+  end
+
+  it "converts 41 to XLI" do
+    result = Converter.do(41)
+    expect(result).to eq("XLI")
+  end
+
+  it "converts 50 to L" do
+    result = Converter.do(50)
+    expect(result).to eq("L")
+  end
+
+  it "converts 51 to LI" do
+    result = Converter.do(51)
+    expect(result).to eq("LI")
+  end
+
+  it "converts 777 to DCCLXXVII" do
     result = Converter.do(777)
     expect(result).to eq("DCCLXXVII")
   end
 
-  xit "converts 2015 to MMXV" do
+  it "converts 2015 to MMXV" do
     result = Converter.do(2015)
     expect(result).to eq("MMXV")
   end
